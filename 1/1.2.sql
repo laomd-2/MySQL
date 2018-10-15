@@ -1,8 +1,8 @@
-SELECT name, address, phone FROM Supplier;
+-- SELECT name, address, phone FROM Supplier;
 
 SELECT * FROM Sales.Orders WHERE DATE("1997-12-25") - orderdate >= 0 AND DATE("1997-12-25") - orderdate < 7 AND totalprice > 1000;
 
-SELECT C.custkey, SUM(O.totalprice) FROM customer C, orders O 
+/*SELECT C.custkey, SUM(O.totalprice) FROM customer C, orders O 
 WHERE C.custkey = O.custkey GROUP BY C.custkey;
 
 SELECT C.custkey, MAX(C.name) FROM customer C, orders O 
