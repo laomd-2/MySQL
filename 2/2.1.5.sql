@@ -1,0 +1,5 @@
+SET ROLE ALL;
+
+USE Sales;
+SELECT * FROM part;
+DELETE FROM orders;
