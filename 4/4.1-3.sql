@@ -1,0 +1,3 @@
+DROP TRIGGER TRI_Lineitem_Price_UPDATE;
+-- DROP TRIGGER TRI_Lineitem_Quantity_UPDATE;
+-- DROP TRIGGER TRI_Lineitem_Quantity_INSERT;
