@@ -49,14 +49,14 @@
 -- 		WHERE partkey = OLD.partkey AND suppkey = OLD.suppkey;
 -- END//
 
--- SELECT L.partkey, L.suppkey, L.quantity, PS.availqty
--- FROM lineitem L, partsupp PS
--- WHERE L.partkey = PS.partkey AND L.suppkey = PS.suppkey 
--- 	AND L.orderkey = 1 AND L.linenumber=1;
+SELECT L.partkey, L.suppkey, L.quantity, PS.availqty
+FROM lineitem L, partsupp PS
+WHERE L.partkey = PS.partkey AND L.suppkey = PS.suppkey 
+	AND L.orderkey = 1 AND L.linenumber=100;
 
 -- UPDATE lineitem SET quantity = quantity + 10000
 -- WHERE orderkey = 1 AND linenumber = 1;
 
--- INSERT INTO lineitem VALUES(1, 1552, 93, 101, 10000, 24710.35, 0.04, 0.025, 'N', 'O', '1996-03-13', '1996-02-12', '1996-03-22', 'DELIVER IN PERSON', 'TRUCK', 'egular courts above the');
+INSERT INTO lineitem VALUES(1, 1552, 93, 100, 17, 24710.35, 0.04, 0.025, 'N', 'O', '1996-03-13', '1996-02-12', '1996-03-22', 'DELIVER IN PERSON', 'TRUCK', 'egular courts above the');
 
-DELETE FROM lineitem WHERE orderkey = 1 AND linenumber = 100;
+-- DELETE FROM lineitem WHERE orderkey = 1 AND linenumber = 100;
