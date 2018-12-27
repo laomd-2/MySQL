@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}On-line Shop{% endblock %}</title>
+    <title>{% block title %}LK在线商城{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
@@ -13,14 +13,14 @@
 <div class="container">
     <div class="row" style="margin-top: 6%">
          <button class="btn btn-info pull-right">
-            {% with totail_items=cart|length %}
+            {% with total_items=cart|length %}
                 {% if cart|length > 0 %}
-                    My Shopping Order:
+                    购物车:
                     <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
-                        {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                        {{ total_items }} 件 {{ totail_items|pluralize }}, 总价. ￥{{ cart.get_total_price }}
                     </a>
                     {% else %}
-                    Your cart is empty.
+                    空购物车
                 {% endif %}
             {% endwith %}
          </button>
