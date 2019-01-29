@@ -5,14 +5,15 @@ from cart.forms import CartAddProductForm
 
 
 def product_list(request, category_slug=None):
-    category = None
+    category = None     # 默认为None，表示显示所有商品
     categories = Category.objects.all()
+    # 筛选出对应目录的商品
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = Product.objects.filter(category=category, available=True)
     else:
         products = Product.objects.filter(available=True)
-    context = {
+    context = {     # HTML/CSS的上下文变量
         'category': category,
         'categories': categories,
         'products': products

@@ -1,0 +1,3 @@
+django
+pymysql
+Pillow==5.0.0

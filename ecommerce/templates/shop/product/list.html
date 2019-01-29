@@ -35,12 +35,13 @@
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module">
-            <h4>Categories</h4>
+            <h4>商品目录</h4>
             <ol class="list-unstyled">
-              <li {% if not category %} class="active"{% endif %}><a href="{% url 'shop:product_list' %}">All</a></li>
+              <li class="active">
+                  <a href="{% url 'shop:product_list' %}">所有</a>
+              </li>
             {% for c in categories %}
-
-              <li {% if category.slug == c.slug %} class="active"{% endif %}>
+              <li class="active">
                   <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
               </li>
             {% endfor %}

@@ -11,8 +11,8 @@ def order_create(request):
         form = OrderCreateForm(request.POST)
         try:
             if form.is_valid():
-                order = form.save()
-                for item in cart:
+                order = form.save()     # 创建对应的订单
+                for item in cart:   # 给每种商品创建一个明细
                     OrderItem.objects.create(
                         order=order,
                         product=item['product'],
